@@ -1,4 +1,4 @@
-# Olist E-Commerce | Customer Cohort & Retention Analysis
+<img width="724" height="382" alt="3 SQL_Step1" src="https://github.com/user-attachments/assets/a473edcb-420a-46a4-ba18-cfefcc0daf42" /><img width="1074" height="606" alt="5 SQL_Step1" src="https://github.com/user-attachments/assets/393c0416-e583-45a3-a317-1fe901cb9c4a" /># Olist E-Commerce | Customer Cohort & Retention Analysis
 
 [![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC292B?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server)
 [![Python](https://img.shields.io/badge/Analytics-Python%203.13-3776AB?logo=python)](https://www.python.org/)
@@ -69,8 +69,7 @@ The project also investigates high-value customers and explores the relationship
 
 ### 1. Data Preparation — Python
 
-- Inspected dataset structure and data quality
-- Examined missing values, duplicates, and data types
+- Inspected dataset structure and data quality (examined missing values, duplicates, and data types)
 <img width="1920" height="953" alt="0 Data_Prep_ _Audit" src="https://github.com/user-attachments/assets/ef3a85f8-93d1-4142-a770-72b41eceb8cc" />
 
 - Pandas for pivoting requirments.
@@ -89,10 +88,20 @@ The project also investigates high-value customers and explores the relationship
 ### 2. Data Modeling — SQL
 
 - Loaded the prepared datasets into SQL.
+<img width="1920" height="722" alt="0 Importing_Data to SQL" src="https://github.com/user-attachments/assets/e75cda5b-e838-4948-9d6d-3258028a99bf" />
+
 - Defined table keys and relationships.
-- Used relational joins to combine relevant customer,
-  order, and payment information.
+<img width="724" height="382" alt="3 SQL_Step1" src="https://github.com/user-attachments/assets/fd6ab348-c6ec-4ff3-bbde-3bd9aa3953cb" />
+
+- Used relational joins to combine relevant customer, order, and payment information.
+<img width="770" height="597" alt="4 SQL_Step1" src="https://github.com/user-attachments/assets/1ba0e759-abc9-4552-941b-ff922a4a56e2" />
+
 - Prepared analytical datasets for customer and revenue analysis.
+<img width="1074" height="606" alt="5 SQL_Step1" src="https://github.com/user-attachments/assets/b93e2519-5e96-43e9-8101-e1e90204aa45" />
+
+- Final data model (Star Schema Diagram).
+<img width="759" height="458" alt="1 Star_Schema Diagram SQL" src="https://github.com/user-attachments/assets/f1bd6fb9-6a9c-4b62-97f6-5f16e93364e9" />
+
 
 ### 3. Cohort & Retention Analysis — Power BI
 
@@ -101,8 +110,8 @@ The project also investigates high-value customers and explores the relationship
 - Prepared a cohort retention matrix.
 - Visualized retention patterns using a heatmap.
 - Identified the top 1% of customers by revenue to highlight high-value customer segments.
-Developed a dashboard to communicate customer retention,
-revenue contribution, and delivery experience.
+- Developed a dashboard to communicate customer retention,
+- revenue contribution, and delivery experience.
 
 ---
 
