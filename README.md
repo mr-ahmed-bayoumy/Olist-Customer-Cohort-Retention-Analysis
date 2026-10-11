@@ -1,137 +1,90 @@
-# Olist Customer Cohort & Retention Analysis
+# Olist Brazilian E-Commerce: Cohort Retention & Executive Intelligence
 
-## Project Overview
+[![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC292B?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server)
+[![Python](https://img.shields.io/badge/Analytics-Python%203.13-3776AB?logo=python)](https://www.python.org/)
+[![Power BI](https://img.shields.io/badge/Dashboard-Power%20BI-F2C811?logo=powerbi)](https://powerbi.microsoft.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-An end-to-end e-commerce analytics project developed as part of the Elevvo Pathways Data Analysis internship.
+---
 
-The project analyzes customer purchasing behavior, cohort retention,
-revenue contribution, and delivery experience using Python, SQL,
-and Power BI.
+## Executive Summary & Business Challenge
+> **"Revenue is vanity, retention is sanity."**
 
-Rather than focusing solely on revenue, the analysis examines whether
-customers acquired in 2017 continued purchasing in 2018 and explores
-patterns in customer retention and purchasing behavior.
+This project investigates the multi-year transactional performance of the **Olist Brazilian E-Commerce Marketplace** (99k+ orders across 96k+ customers). The primary objective was answering the executive question:  
+*Are customers acquired in 2017 continuing to generate recurring revenue throughout 2018?*
 
-## Business Problem
+Through an enterprise end-to-end data pipeline, this project proves that while top-line revenue expanded significantly, Olist operates as an **acquisition-driven marketplace with a critical retention decay** (repeat purchase rates fall below 0.7% post-acquisition month).
 
-Revenue alone does not provide a complete picture of business performance.
+---
 
-The key business question is:
+## Architectural Pipeline
 
-Are customers acquired in 2017 returning to make purchases in 2018?
+[Raw Olist Data]
+│
+▼ (Phase 1: Python)
+[Data Auditing, Cleansing & Cohort Pivoting] ──> Export Normalized CSVs & Retention Matrix
+│
+▼ (Phase 2: SQL Server)
+[Star Schema Modeling, PK/FK Constraints, Multi-Table Joining View]
+│
+▼ (Phase 3: Power BI)
+[DAX KPI Engine, Interactive Retention Heatmap & Executive Dashboard]
 
-The project also investigates high-value customers and explores the
-relationship between delivery time and customer review scores.
+---
 
-## Project Objectives
+## Key Business Insights & Analytical Findings
 
-- Analyze customer purchasing behavior across acquisition cohorts.
-- Calculate customer retention across subsequent months.
-- Build a cohort retention heatmap.
-- Apply relational data modeling using SQL.
-- Identify the top 1% of customers by revenue.
-- Compare average delivery time with review scores across states.
-- Present actionable insights through an interactive Power BI dashboard.
+1. **The Retention Cliff (Leaky Bucket Syndrome):**
+   - Monthly cohort analysis reveals that retention drops from **100% in Month 0 to under 0.7% by Month 1**, averaging below **0.3%** across subsequent months.
+   - Revenue growth in 2018 was driven exclusively by new customer acquisition rather than recurring customer lifetime value (LTV).
 
-## Dataset
+2. **Delivery Latency vs. Customer Satisfaction (Correlation: -0.47):**
+   - High delivery duration correlates negatively with review scores.
+   - Remote northern states (e.g., RR, AP, AM) experience severe delivery delays (26–29 days average), resulting in the platform's lowest review ratings (< 3.9 / 5.0).
 
-The project uses the Olist Brazilian E-Commerce dataset.
+3. **Revenue Concentration (The Top 1% Power Users):**
+   - Validating the Pareto Principle, the **Top 1% of customers (934 users)** spend upwards of **R$ 1,097** each.
+   - This elite segment contributes **10.35% (R$ 1.6M+)** of total platform monetization.
 
-The data includes customer, order, payment, review, and related
-e-commerce information.
+---
 
-The dataset supports customer-level, order-level, and payment-level
-analysis through relational data modeling.
+## Strategic Recommendations for Leadership
 
-## Tools & Technologies
+* **Automate Post-Purchase CRM Triggers:** Launch automated reactivation workflows on Day 14 and Day 30 post-delivery offering incentives for second orders.
+* **Regional Logistics Decentralization:** Establish localized fulfillment hubs in northern/northeastern states to cut transit latency from ~28 days to under 12 days.
+* **VIP Loyalty Program:** Create dedicated retention perks (free shipping tiers and priority fulfillment) tailored to the Top 1% high-spending power users.
 
-- Python
-- Pandas
-- SQL
-- Relational Data Modeling
-- Star Schema
-- Power BI
-- DAX
-- Data Visualization
+---
 
-## Project Workflow
+## Repository Structure & Deliverables
 
-### 1. Data Preparation — Python
+* **`notebooks/E-Commerce Public Dataset by Olist.ipynb`**:
+  - Raw dataset ingestion and schema audit.
+  - Data hygiene: filtered strictly for completed (`delivered`) orders.
+  - Pandas `pivot_table` cohort analysis and Seaborn heatmap generation.
+* **`sql/Task9_SQL_Modeling.sql`**:
+  - Relational schema creation with Foreign Key integrity centered on `fact_orders`.
+  - Multi-table analytical view (`vw_cohort_master`) joining transactions, unique customer IDs, payments, and review scores.
+* **`power_bi/Olist_Executive_Dashboard.pbix`**:
+  - Data model with Star Schema relational enforcement.
+  - DAX metrics: Delivery latency, Review averages, and revenue distributions.
+  - Visuals: Dynamic Retention Heatmap, Regional Delivery vs. Rating Scatter, and Top 1% Segmentation.
 
-- Inspected dataset structure and data quality.
-- Examined missing values, duplicates, and data types.
-- Cleaned and prepared datasets for downstream analysis.
-- Prepared cohort retention data for heatmap visualization.
+---
 
-### 2. SQL Data Modeling
+## Dashboard & Architecture Visuals
 
-- Loaded the prepared datasets into SQL.
-- Defined table keys and relationships.
-- Used relational joins to combine relevant customer,
-  order, and payment information.
-- Prepared analytical datasets for customer and revenue analysis.
+### 1. Power BI Executive Dashboard
+![Power BI Executive Dashboard](assets/04_powerbi_executive_dashboard.png)
 
-### 3. Cohort & Retention Analysis
+### 2. Relational Star Schema (Database Diagram)
+![SQL Server Diagram](assets/02_sql_star_schema_diagram.png)
 
-- Grouped customers by acquisition month.
-- Examined repeat purchasing behavior across subsequent months.
-- Prepared a cohort retention matrix.
-- Visualized retention patterns using a heatmap.
+### 3. Exploratory Cohort Heatmap (Python Seaborn)
+![Python Cohort Heatmap](assets/01_python_cohort_heatmap.png)
 
-### 4. Power BI Dashboard
-
-Developed a dashboard to communicate customer retention,
-revenue contribution, and delivery experience.
-
-The dashboard includes:
-
-- Cohort Retention Heatmap
-- Customer Retention Analysis
-- Top 1% Power Users by Revenue
-- Delivery Time vs. Review Score by State
-
-## Bonus Analysis
-
-### Power Users
-
-Identified the top 1% of customers by revenue to highlight
-high-value customer segments.
-
-### Delivery Experience
-
-Compared average delivery time and review scores across
-customer states to explore potential relationships between
-delivery performance and customer satisfaction.
-
-## Key Business Questions
-
-- How does customer retention change across acquisition cohorts?
-- Do customers acquired in 2017 continue purchasing in 2018?
-- Which customers contribute the most revenue?
-- How does delivery time vary across customer states?
-- Is delivery time associated with customer review scores?
-
-## Repository Structure
-
-- `python/` — Python analysis and preparation.
-- `sql/` — SQL queries and relational data modeling.
-- `powerbi/` — Power BI dashboard.
-- `screenshots/` — Project visuals and documentation.
-
-## Deliverables
-
-- Python analysis notebook
-- SQL analysis and data modeling
-- Power BI dashboard
-- Cohort retention heatmap
-- Power user analysis
-- Delivery and review analysis
+---
 
 ## Author
-
-Ahmed Bayoumy  
-Data Analyst
-
-## Program
-
-Elevvo Pathways
+* **Ahmed Bayoumy** — Data Analyst & Business Intelligence Specialist
+* [LinkedIn Profile](https://www.linkedin.com/) | [GitHub Portfolio](https://github.com/)
