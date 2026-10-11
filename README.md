@@ -1,5 +1,3 @@
-<img width="724" height="382" alt="3 SQL_Step1" src="https://github.com/user-attachments/assets/a473edcb-420a-46a4-ba18-cfefcc0daf42" /><img width="1074" height="606" alt="5 SQL_Step1" src="https://github.com/user-attachments/assets/393c0416-e583-45a3-a317-1fe901cb9c4a" /># Olist E-Commerce | Customer Cohort & Retention Analysis
-
 [![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC292B?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server)
 [![Python](https://img.shields.io/badge/Analytics-Python%203.13-3776AB?logo=python)](https://www.python.org/)
 [![Power BI](https://img.shields.io/badge/Dashboard-Power%20BI-F2C811?logo=powerbi)](https://powerbi.microsoft.com/)
@@ -96,12 +94,11 @@ The project also investigates high-value customers and explores the relationship
 - Used relational joins to combine relevant customer, order, and payment information.
 <img width="770" height="597" alt="4 SQL_Step1" src="https://github.com/user-attachments/assets/1ba0e759-abc9-4552-941b-ff922a4a56e2" />
 
-- Prepared analytical datasets for customer and revenue analysis.
-<img width="1074" height="606" alt="5 SQL_Step1" src="https://github.com/user-attachments/assets/b93e2519-5e96-43e9-8101-e1e90204aa45" />
-
-- Final data model (Star Schema Diagram).
+- Data model (Star Schema Diagram).
 <img width="759" height="458" alt="1 Star_Schema Diagram SQL" src="https://github.com/user-attachments/assets/f1bd6fb9-6a9c-4b62-97f6-5f16e93364e9" />
 
+- Prepared analytical datasets for customer and revenue analysis.
+<img width="1074" height="606" alt="5 SQL_Step1" src="https://github.com/user-attachments/assets/b93e2519-5e96-43e9-8101-e1e90204aa45" />
 
 ### 3. Cohort & Retention Analysis — Power BI
 
