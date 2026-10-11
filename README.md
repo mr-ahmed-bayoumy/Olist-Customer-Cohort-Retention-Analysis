@@ -100,6 +100,7 @@ The project also investigates high-value customers and explores the relationship
 - Prepared analytical datasets for customer and revenue analysis.
 <img width="1074" height="606" alt="5 SQL_Step1" src="https://github.com/user-attachments/assets/b93e2519-5e96-43e9-8101-e1e90204aa45" />
 
+
 ### 3. Cohort & Retention Analysis — Power BI
 
 - Data Ingestion: Direct SQL Server connection and master view import.
