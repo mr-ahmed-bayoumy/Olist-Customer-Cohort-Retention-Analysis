@@ -70,9 +70,10 @@ The project also investigates high-value customers and explores the relationship
 ### 1. Data Preparation — Python
 
 - Inspected dataset structure and data quality
+- Examined missing values, duplicates, and data types
 <img width="1920" height="953" alt="0 Data_Prep_ _Audit" src="https://github.com/user-attachments/assets/ef3a85f8-93d1-4142-a770-72b41eceb8cc" />
 
-- Examined missing values, duplicates, and data types.
+- Pandas for pivoting requirments.
 <img width="528" height="574" alt="1 data_clean" src="https://github.com/user-attachments/assets/9e2d5812-4b30-40fb-88fb-1684eec538b1" />
 
 - Cleaned and prepared datasets for downstream analysis.
