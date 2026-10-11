@@ -102,29 +102,28 @@ The project also investigates high-value customers and explores the relationship
 
 ### 3. Cohort & Retention Analysis — Power BI
 
-- Live Relational Data Ingestion: Direct SQL Server connection importing normalized entities and master analytical view.
+- Data Ingestion: Direct SQL Server connection and master view import.
 <img width="878" height="679" alt="Data_Load" src="https://github.com/user-attachments/assets/5adbfd17-6879-40e4-8d47-608e91bf153d" />
 
 
-- Enterprise Star Schema Architecture: Centralized fact_orders model with strict 1-to-many relational integrity and DAX measure repository.
+- Star Schema: Relational model centered on fact_orders with PK/FK constraints.
 <img width="1365" height="598" alt="Data_Modeling" src="https://github.com/user-attachments/assets/9d094791-e4d8-4674-bdc4-62d31c28f2ea" />
 
 
-- Executive Report Cover: Strategic overview outlining project architecture, business objectives, and technology stack.
+- Executive Cover: Project overview, objectives, and tech stack.
 <img width="991" height="552" alt="Slide1" src="https://github.com/user-attachments/assets/b673d510-eeda-4faa-85ea-f5e914b46fe4" />
 
 
-- Executive Performance Dashboard: Integrated KPI tracking, delivery vs. review correlation, and Top 1% power user segmentation.
+- Executive Dashboard: Core KPIs, delivery vs. rating correlation, and top 1% power users.
 <img width="975" height="545" alt="Slide2-" src="https://github.com/user-attachments/assets/8c24931a-f08e-4a04-a7e4-67080134b6f5" />
 
 
-- 2017–2018 Cohort Retention Heatmap: Empirical retention matrix revealing sharp post-acquisition drop-off below 0.7%.
+- Cohort Retention: 2017–2018 customer retention heatmap and drop-off matrix.
 <img width="970" height="544" alt="Slide3" src="https://github.com/user-attachments/assets/85bb890c-4919-410b-aeeb-9d0e1a50334a" />
 
 
-- Executive Insights & Strategic Roadmap: C-level analytical findings, supply chain solutions, and customer retention strategies.
+- Strategic Roadmap: Key business findings and executive retention recommendations.
 <img width="972" height="540" alt="Slide4" src="https://github.com/user-attachments/assets/bde09656-a3a4-4af3-9b58-1f3633c91eb2" />
-
 
 
 ---
