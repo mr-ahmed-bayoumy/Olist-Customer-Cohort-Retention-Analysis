@@ -1,4 +1,4 @@
-# Olist Brazilian E-Commerce: Cohort Retention & Executive Intelligence
+# Olist E-Commerce | Customer Cohort & Retention Analysis
 
 [![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC292B?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server)
 [![Python](https://img.shields.io/badge/Analytics-Python%203.13-3776AB?logo=python)](https://www.python.org/)
@@ -7,26 +7,53 @@
 
 ---
 
-## Executive Summary & Business Challenge
-> **"Revenue is vanity, retention is sanity."**
+## Project Overview
 
-This project investigates the multi-year transactional performance of the **Olist Brazilian E-Commerce Marketplace** (99k+ orders across 96k+ customers). The primary objective was answering the executive question:  
-*Are customers acquired in 2017 continuing to generate recurring revenue throughout 2018?*
+An end-to-end e-commerce analytics project developed as part of the Elevvo Pathways Data Analysis internship.
+
+The project analyzes customer purchasing behavior, cohort retention, revenue contribution, and delivery experience using Python, SQL,
+and Power BI.
+
+Rather than focusing solely on revenue, the analysis examines whether customers acquired in 2017 continued purchasing in 2018 and explores
+patterns in customer retention and purchasing behavior across **Olist Brazilian E-Commerce Marketplace** (99k+ orders across 96k+ customers)
 
 Through an enterprise end-to-end data pipeline, this project proves that while top-line revenue expanded significantly, Olist operates as an **acquisition-driven marketplace with a critical retention decay** (repeat purchase rates fall below 0.7% post-acquisition month).
+
+---
+
+## Business Problem
+
+Revenue alone does not provide a complete picture of business performance.
+
+The key business question is:
+
+Are customers acquired in 2017 returning to make purchases in 2018?
+
+The project also investigates high-value customers and explores the
+relationship between delivery time and customer review scores.
+
+## Project Objectives
+
+- Analyze customer purchasing behavior across acquisition cohorts.
+- Calculate customer retention across subsequent months.
+- Build a cohort retention heatmap.
+- Apply relational data modeling using SQL.
+- Identify the top 1% of customers by revenue.
+- Compare average delivery time with review scores across states.
+- Present actionable insights through an interactive Power BI dashboard.
 
 ---
 
 ## Architectural Pipeline
 
 [Raw Olist Data]
-│
+
 ▼ (Phase 1: Python)
 [Data Auditing, Cleansing & Cohort Pivoting] ──> Export Normalized CSVs & Retention Matrix
-│
+
 ▼ (Phase 2: SQL Server)
 [Star Schema Modeling, PK/FK Constraints, Multi-Table Joining View]
-│
+
 ▼ (Phase 3: Power BI)
 [DAX KPI Engine, Interactive Retention Heatmap & Executive Dashboard]
 
@@ -50,10 +77,25 @@ Through an enterprise end-to-end data pipeline, this project proves that while t
 
 ## Strategic Recommendations for Leadership
 
-* **Automate Post-Purchase CRM Triggers:** Launch automated reactivation workflows on Day 14 and Day 30 post-delivery offering incentives for second orders.
-* **Regional Logistics Decentralization:** Establish localized fulfillment hubs in northern/northeastern states to cut transit latency from ~28 days to under 12 days.
-* **VIP Loyalty Program:** Create dedicated retention perks (free shipping tiers and priority fulfillment) tailored to the Top 1% high-spending power users.
+* **Automate Post-Purchase CRM Triggers:**
+* Launch automated reactivation workflows on Day 14 and Day 30 post-delivery offering incentives for second orders.
+* **Regional Logistics Decentralization:**
+* stablish localized fulfillment hubs in northern/northeastern states to cut transit latency from ~28 days to under 12 days.
+* **VIP Loyalty Program:**
+* Create dedicated retention perks (free shipping tiers and priority fulfillment) tailored to the Top 1% high-spending power users.
 
+---
+
+## Tools & Technologies
+
+- Python
+- Pandas
+- SQL
+- Relational Data Modeling
+- Star Schema
+- Power BI
+- DAX
+- Data Visualization
 ---
 
 ## Repository Structure & Deliverables
@@ -75,14 +117,23 @@ Through an enterprise end-to-end data pipeline, this project proves that while t
 ## Dashboard & Architecture Visuals
 
 ### 1. Power BI Executive Dashboard
-![Power BI Executive Dashboard](assets/04_powerbi_executive_dashboard.png)
+xxx
 
 ### 2. Relational Star Schema (Database Diagram)
-![SQL Server Diagram](assets/02_sql_star_schema_diagram.png)
+xxx
 
 ### 3. Exploratory Cohort Heatmap (Python Seaborn)
-![Python Cohort Heatmap](assets/01_python_cohort_heatmap.png)
+xxx
 
+---
+## Deliverables
+
+- Python analysis notebook
+- SQL analysis and data modeling
+- Power BI dashboard
+- Cohort retention heatmap
+- Power user analysis
+- Delivery and review analysis
 ---
 
 ## Author
