@@ -23,14 +23,9 @@ Through an enterprise end-to-end data pipeline, this project proves that while t
 
 ## Business Problem
 
-Revenue alone does not provide a complete picture of business performance.
-
-The key business question is:
-
+Revenue alone does not provide a complete picture of business performance, The key business question is:
 Are customers acquired in 2017 returning to make purchases in 2018?
-
-The project also investigates high-value customers and explores the
-relationship between delivery time and customer review scores.
+The project also investigates high-value customers and explores the relationship between delivery time and customer review scores.
 
 ## Project Objectives
 
@@ -41,6 +36,19 @@ relationship between delivery time and customer review scores.
 - Identify the top 1% of customers by revenue.
 - Compare average delivery time with review scores across states.
 - Present actionable insights through an interactive Power BI dashboard.
+
+---
+
+## Tools & Technologies
+
+- Python
+- Pandas
+- SQL
+- Relational Data Modeling
+- Star Schema
+- Power BI
+- DAX
+- Data Visualization
 
 ---
 
@@ -56,6 +64,35 @@ relationship between delivery time and customer review scores.
 
 ▼ (Phase 3: Power BI)
 [DAX KPI Engine, Interactive Retention Heatmap & Executive Dashboard]
+
+---
+
+## Project Workflow
+
+### 1. Data Preparation — Python
+
+- Inspected dataset structure and data quality.
+- Examined missing values, duplicates, and data types.
+- Cleaned and prepared datasets for downstream analysis.
+- Prepared cohort retention data for heatmap visualization.
+
+### 2. Data Modeling — SQL
+
+- Loaded the prepared datasets into SQL.
+- Defined table keys and relationships.
+- Used relational joins to combine relevant customer,
+  order, and payment information.
+- Prepared analytical datasets for customer and revenue analysis.
+
+### 3. Cohort & Retention Analysis — Power BI
+
+- Grouped customers by acquisition month.
+- Examined repeat purchasing behavior across subsequent months.
+- Prepared a cohort retention matrix.
+- Visualized retention patterns using a heatmap.
+- Identified the top 1% of customers by revenue to highlight high-value customer segments.
+Developed a dashboard to communicate customer retention,
+revenue contribution, and delivery experience.
 
 ---
 
@@ -83,49 +120,9 @@ relationship between delivery time and customer review scores.
 * stablish localized fulfillment hubs in northern/northeastern states to cut transit latency from ~28 days to under 12 days.
 * **VIP Loyalty Program:**
 * Create dedicated retention perks (free shipping tiers and priority fulfillment) tailored to the Top 1% high-spending power users.
-
+  
 ---
 
-## Tools & Technologies
-
-- Python
-- Pandas
-- SQL
-- Relational Data Modeling
-- Star Schema
-- Power BI
-- DAX
-- Data Visualization
----
-
-## Repository Structure & Deliverables
-
-* **`notebooks/E-Commerce Public Dataset by Olist.ipynb`**:
-  - Raw dataset ingestion and schema audit.
-  - Data hygiene: filtered strictly for completed (`delivered`) orders.
-  - Pandas `pivot_table` cohort analysis and Seaborn heatmap generation.
-* **`sql/Task9_SQL_Modeling.sql`**:
-  - Relational schema creation with Foreign Key integrity centered on `fact_orders`.
-  - Multi-table analytical view (`vw_cohort_master`) joining transactions, unique customer IDs, payments, and review scores.
-* **`power_bi/Olist_Executive_Dashboard.pbix`**:
-  - Data model with Star Schema relational enforcement.
-  - DAX metrics: Delivery latency, Review averages, and revenue distributions.
-  - Visuals: Dynamic Retention Heatmap, Regional Delivery vs. Rating Scatter, and Top 1% Segmentation.
-
----
-
-## Dashboard & Architecture Visuals
-
-### 1. Power BI Executive Dashboard
-xxx
-
-### 2. Relational Star Schema (Database Diagram)
-xxx
-
-### 3. Exploratory Cohort Heatmap (Python Seaborn)
-xxx
-
----
 ## Deliverables
 
 - Python analysis notebook
