@@ -54,8 +54,6 @@ The project also investigates high-value customers and explores the relationship
 
 ## Architectural Pipeline
 
-[Raw Olist Data]
-
 ▼ (Phase 1: Python)
 [Data Auditing, Cleansing & Cohort Pivoting] ──> Export Normalized CSVs & Retention Matrix
 
